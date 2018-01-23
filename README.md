@@ -8,3 +8,5 @@ mai testez si eu o data
 papagalul confirma
 
 bag pula nu inteleg
+ACU AM INTELES
+
