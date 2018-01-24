@@ -18,7 +18,6 @@ class GameViewController: UIViewController{
         super.viewDidLoad()
         
         
-        
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         let scene = GameScene(size: CGSize(width: 1536, height: 2048))

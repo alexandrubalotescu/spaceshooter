@@ -9,6 +9,7 @@
 import SpriteKit
 import GameplayKit
 import CoreMotion
+ 
 
 class GameScene: SKScene {
     
@@ -72,7 +73,7 @@ class GameScene: SKScene {
     //Create all the objects that appear on the game scene
     override func didMove(to view: SKView) {
         
-        
+        startNewLevel()
         
         //Game over - no more missiles
         outOfMissilesLabel.text = "Game Over! No more Missiles"
@@ -117,7 +118,12 @@ class GameScene: SKScene {
         
     }
     
-    
+    func random() -> CGFloat {
+        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
+    }
+    func random(min min: CGFloat, max: CGFloat) -> CGFloat {
+        return random() * (max - min) + min
+    }
     
     override func update(_ currentTime: CFTimeInterval) {
         //Start accelerometer updates to move the spaceShip when phone tilted
@@ -163,6 +169,42 @@ class GameScene: SKScene {
         
     }
     
+    func startNewLevel() {
+        
+        let spawn = SKAction.run(spawnMeteorites)
+        //Time between spawning meteorites
+        let waitToSpawn = SKAction.wait(forDuration: 1.2)
+        let spawnSequence = SKAction.sequence([spawn, waitToSpawn])
+        let spawnForever = SKAction.repeatForever(spawnSequence)
+        self.run(spawnForever)
+        
+        
+    }
+    
+    func spawnMeteorites() {
+        
+        let randomXStart = random(min: gameArea.minX, max: gameArea.maxX)
+        let randomXEnd = random(min: gameArea.minX, max: gameArea.maxX)
+        
+        let startPoint = CGPoint(x: randomXStart, y: self.size.height*1.2)
+        let endPoint = CGPoint(x: randomXEnd, y: -self.size.height*0.2)
+        
+        let meteorite : SKSpriteNode!
+        meteorite = SKSpriteNode(imageNamed: "meteor.png")
+        meteorite.setScale(2)
+        
+        meteorite.position = startPoint
+        meteorite.zPosition = 2
+        
+        self.addChild(meteorite)
+        
+        let moveMeteorite : SKAction = SKAction.move(to: endPoint, duration: 1.2)
+        let deleteMeteorite : SKAction = SKAction.removeFromParent()
+        let meteoriteSequence : SKAction = SKAction.sequence([moveMeteorite, deleteMeteorite])
+        meteorite.run(meteoriteSequence)
+        
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if missileCount > 0 {
             fireMissile()
@@ -176,6 +218,7 @@ class GameScene: SKScene {
         }
         
     }
+    
     
     
 }
