@@ -12,48 +12,67 @@ import CoreMotion
 
 class GameScene: SKScene {
     
+    //Create a motionManager to fetch accelerometer data
     let motionManager : CMMotionManager = CMMotionManager()
-    var timer : Timer!
     
     let player = SKSpriteNode(imageNamed: "spaceShip.png")
     let rocketCountLabel = SKLabelNode(fontNamed: "Thonburi")
     let missileCountLabel = SKLabelNode(fontNamed: "Thonburi")
     let outOfMissilesLabel = SKLabelNode(fontNamed: "Thonburi")
-
-    var destX:CGFloat  = 0.0
     
-    
-    func holdPosition() {
-        self.player.position = CGPoint(x: self.position.x, y: self.size.height*0.2)
+    //Create a gameArea the size of the display
+    var gameArea:CGRect
+    //Initialize gameArea by size
+    override init(size: CGSize) {
+        let maxAspectRatio = CGFloat(16.0/9.0)
+        let playableWidth = size.width/maxAspectRatio
+        let margin = (size.width - playableWidth) / 2
+        gameArea = CGRect(x: margin, y: 0, width: playableWidth, height: size.height)
+        super.init(size: size)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func startAccelerometerData() {
+        
+        //Acc hardware available
+        if self.motionManager.isAccelerometerAvailable {
+            self.motionManager.startAccelerometerUpdates()
+            
+            //Check if data is your accelerometerData (always true)
+            if let data = self.motionManager.accelerometerData {
+                //Create variable that stores your x accelerometerData
+                let x = CGFloat(data.acceleration.x)
+                
+                //Move left for x>0
+                if x > 0 {
+                    player.position.x += x*100
+                    print(player.position.x)
+                }
+                    //Move right for x<0
+                else if x < 0 {
+                    player.position.x += x*100
+                    print(player.position.x)
+                }
+                //Switch to left side if spaceShip too far right
+                if player.position.x > gameArea.maxX + player.size.width {
+                    player.position.x = gameArea.minX - player.size.width
+                }
+                    //Switch to right side if spaceShip too far left
+                else if player.position.x < gameArea.minX - player.size.width {
+                    player.position.x = gameArea.maxX + player.size.width
+                }
+            }
+        }
+        
+    }
+    
+    //Create all the objects that appear on the game scene
     override func didMove(to view: SKView) {
         
-        if motionManager.isAccelerometerAvailable {
-            motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler:{
-                data, error in
-                
-                let currentX = self.player.position.x
-                
-                // 3
-                if (data?.acceleration.x)! < -0.05 {
-                    self.destX = currentX + CGFloat((data?.acceleration.x)! * 1500)
-                    print("X Coordinate: \((data?.acceleration.x)!)")
-                    print("Player coordinate: \(self.destX)")
-                }
-                    
-                else if (data?.acceleration.x)! > 0.05 {
-                    self.destX = currentX + CGFloat((data?.acceleration.x)! * 1500)
-                    print("X Coordinate: \((data?.acceleration.x)!)")
-                    print("Player coordinate: \(self.destX)")
-                } else if (data?.acceleration.x)! >= -0.05 && (data?.acceleration.x)! <= 0.05 {
-                    self.holdPosition()
-                    print("X Coordinate: \((data?.acceleration.x)!)")
-                    print("Player coordinate: \(self.destX)")
-                }
-                
-            })
-        }
+        
         
         //Game over - no more missiles
         outOfMissilesLabel.text = "Game Over! No more Missiles"
@@ -94,11 +113,15 @@ class GameScene: SKScene {
         self.addChild(outOfMissilesLabel)
         
         
+        
+        
     }
- 
+    
+    
+    
     override func update(_ currentTime: CFTimeInterval) {
-        let action = SKAction.moveTo(x: destX, duration: 1)
-        self.player.run(action)
+        //Start accelerometer updates to move the spaceShip when phone tilted
+        startAccelerometerData()
     }
     
     var missileCount = 100
@@ -151,8 +174,9 @@ class GameScene: SKScene {
         else {
             outOfMissilesLabel.zPosition = 4
         }
- 
+        
     }
     
     
 }
+
