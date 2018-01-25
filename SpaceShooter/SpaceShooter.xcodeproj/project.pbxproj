@@ -25,6 +25,7 @@
 		A4A3756D1FE35926004586C0 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4A3756C1FE35926004586C0 /* Icon-App-60x60@2x.png */; };
 		A4A3756F1FE359E1004586C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A3756E1FE359E1004586C0 /* Assets.xcassets */; };
 		A4C0A69D2019150D007E289F /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A4C0A69C2019150D007E289F /* playButton.png */; };
+		CE8BE0EF201A334B00516B83 /* moonhouse.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE8BE0EE201A334B00516B83 /* moonhouse.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		A4A3756C1FE35926004586C0 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
 		A4A3756E1FE359E1004586C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4C0A69C2019150D007E289F /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
+		CE8BE0EE201A334B00516B83 /* moonhouse.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = moonhouse.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				A4168B1A1FE094D400E41ADD /* SpaceShooter */,
+				CE8BE0ED201A332C00516B83 /* Fonts */,
 				A4168B351FE094D400E41ADD /* SpaceShooterTests */,
 				A4168B401FE094D500E41ADD /* SpaceShooterUITests */,
 				A4168B191FE094D400E41ADD /* Products */,
@@ -156,6 +159,14 @@
 				A4168B431FE094D500E41ADD /* Info.plist */,
 			);
 			path = SpaceShooterUITests;
+			sourceTree = "<group>";
+		};
+		CE8BE0ED201A332C00516B83 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE8BE0EE201A334B00516B83 /* moonhouse.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				A4A3756B1FE3591F004586C0 /* Icon-App-60x60@3x.png in Resources */,
 				A4A3756F1FE359E1004586C0 /* Assets.xcassets in Resources */,
 				A4168B1E1FE094D400E41ADD /* GameScene.sks in Resources */,
+				CE8BE0EF201A334B00516B83 /* moonhouse.ttf in Resources */,
 				A4A375671FE2C83B004586C0 /* laser.png in Resources */,
 				A4A375631FE17BF9004586C0 /* spaceWallpaper.jpg in Resources */,
 				A4A375611FE174C2004586C0 /* spaceShip.png in Resources */,
