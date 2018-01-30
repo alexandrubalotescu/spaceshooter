@@ -16,15 +16,15 @@
 		A4168B2C1FE094D400E41ADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4168B2A1FE094D400E41ADD /* LaunchScreen.storyboard */; };
 		A4168B371FE094D400E41ADD /* SpaceShooterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4168B361FE094D400E41ADD /* SpaceShooterTests.swift */; };
 		A4168B421FE094D500E41ADD /* SpaceShooterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4168B411FE094D500E41ADD /* SpaceShooterUITests.swift */; };
-		A452BCF8201936EE00820829 /* meteor.png in Resources */ = {isa = PBXBuildFile; fileRef = A452BCF7201936EE00820829 /* meteor.png */; };
-		A4A375611FE174C2004586C0 /* spaceShip.png in Resources */ = {isa = PBXBuildFile; fileRef = A4A375601FE174C2004586C0 /* spaceShip.png */; };
-		A4A375631FE17BF9004586C0 /* spaceWallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4A375621FE17BF9004586C0 /* spaceWallpaper.jpg */; };
-		A4A375651FE17E7B004586C0 /* missile.png in Resources */ = {isa = PBXBuildFile; fileRef = A4A375641FE17E7A004586C0 /* missile.png */; };
-		A4A375671FE2C83B004586C0 /* laser.png in Resources */ = {isa = PBXBuildFile; fileRef = A4A375661FE2C83A004586C0 /* laser.png */; };
+		A4A1946A201E3617003CBF0C /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A19469201E3617003CBF0C /* GameOverScene.swift */; };
 		A4A3756B1FE3591F004586C0 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4A3756A1FE3591F004586C0 /* Icon-App-60x60@3x.png */; };
 		A4A3756D1FE35926004586C0 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4A3756C1FE35926004586C0 /* Icon-App-60x60@2x.png */; };
 		A4A3756F1FE359E1004586C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A3756E1FE359E1004586C0 /* Assets.xcassets */; };
+<<<<<<< HEAD
+=======
 		A4C0A69D2019150D007E289F /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A4C0A69C2019150D007E289F /* playButton.png */; };
+		CE8BE0EF201A334B00516B83 /* moonhouse.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE8BE0EE201A334B00516B83 /* moonhouse.ttf */; };
+>>>>>>> 517eff9bd63943cd8b1d9dcda9e3883b6f9a9614
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,15 +60,15 @@
 		A4168B3D1FE094D500E41ADD /* SpaceShooterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceShooterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4168B411FE094D500E41ADD /* SpaceShooterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceShooterUITests.swift; sourceTree = "<group>"; };
 		A4168B431FE094D500E41ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A452BCF7201936EE00820829 /* meteor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meteor.png; sourceTree = "<group>"; };
-		A4A375601FE174C2004586C0 /* spaceShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spaceShip.png; sourceTree = "<group>"; };
-		A4A375621FE17BF9004586C0 /* spaceWallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spaceWallpaper.jpg; sourceTree = "<group>"; };
-		A4A375641FE17E7A004586C0 /* missile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missile.png; sourceTree = "<group>"; };
-		A4A375661FE2C83A004586C0 /* laser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laser.png; sourceTree = "<group>"; };
+		A4A19469201E3617003CBF0C /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		A4A3756A1FE3591F004586C0 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
 		A4A3756C1FE35926004586C0 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
 		A4A3756E1FE359E1004586C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
 		A4C0A69C2019150D007E289F /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
+		CE8BE0EE201A334B00516B83 /* moonhouse.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = moonhouse.ttf; sourceTree = "<group>"; };
+>>>>>>> 517eff9bd63943cd8b1d9dcda9e3883b6f9a9614
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				A4168B1A1FE094D400E41ADD /* SpaceShooter */,
+				CE8BE0ED201A332C00516B83 /* Fonts */,
 				A4168B351FE094D400E41ADD /* SpaceShooterTests */,
 				A4168B401FE094D500E41ADD /* SpaceShooterUITests */,
 				A4168B191FE094D400E41ADD /* Products */,
@@ -119,19 +120,14 @@
 		A4168B1A1FE094D400E41ADD /* SpaceShooter */ = {
 			isa = PBXGroup;
 			children = (
-				A4A375641FE17E7A004586C0 /* missile.png */,
-				A4A375661FE2C83A004586C0 /* laser.png */,
-				A4C0A69C2019150D007E289F /* playButton.png */,
-				A4A375621FE17BF9004586C0 /* spaceWallpaper.jpg */,
-				A452BCF7201936EE00820829 /* meteor.png */,
 				A4A3756E1FE359E1004586C0 /* Assets.xcassets */,
-				A4A375601FE174C2004586C0 /* spaceShip.png */,
 				A4168B1B1FE094D400E41ADD /* AppDelegate.swift */,
 				A4168B1D1FE094D400E41ADD /* GameScene.sks */,
 				A4168B1F1FE094D400E41ADD /* Actions.sks */,
 				A4A3756A1FE3591F004586C0 /* Icon-App-60x60@3x.png */,
-				A4168B211FE094D400E41ADD /* GameScene.swift */,
 				A4A3756C1FE35926004586C0 /* Icon-App-60x60@2x.png */,
+				A4168B211FE094D400E41ADD /* GameScene.swift */,
+				A4A19469201E3617003CBF0C /* GameOverScene.swift */,
 				A4168B231FE094D400E41ADD /* GameViewController.swift */,
 				A4168B251FE094D400E41ADD /* Main.storyboard */,
 				A4168B2A1FE094D400E41ADD /* LaunchScreen.storyboard */,
@@ -156,6 +152,14 @@
 				A4168B431FE094D500E41ADD /* Info.plist */,
 			);
 			path = SpaceShooterUITests;
+			sourceTree = "<group>";
+		};
+		CE8BE0ED201A332C00516B83 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE8BE0EE201A334B00516B83 /* moonhouse.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,13 +273,16 @@
 				A4A3756B1FE3591F004586C0 /* Icon-App-60x60@3x.png in Resources */,
 				A4A3756F1FE359E1004586C0 /* Assets.xcassets in Resources */,
 				A4168B1E1FE094D400E41ADD /* GameScene.sks in Resources */,
+<<<<<<< HEAD
+=======
+				CE8BE0EF201A334B00516B83 /* moonhouse.ttf in Resources */,
 				A4A375671FE2C83B004586C0 /* laser.png in Resources */,
 				A4A375631FE17BF9004586C0 /* spaceWallpaper.jpg in Resources */,
 				A4A375611FE174C2004586C0 /* spaceShip.png in Resources */,
 				A4C0A69D2019150D007E289F /* playButton.png in Resources */,
 				A452BCF8201936EE00820829 /* meteor.png in Resources */,
+>>>>>>> 517eff9bd63943cd8b1d9dcda9e3883b6f9a9614
 				A4A3756D1FE35926004586C0 /* Icon-App-60x60@2x.png in Resources */,
-				A4A375651FE17E7B004586C0 /* missile.png in Resources */,
 				A4168B2C1FE094D400E41ADD /* LaunchScreen.storyboard in Resources */,
 				A4168B201FE094D400E41ADD /* Actions.sks in Resources */,
 			);
@@ -304,6 +311,7 @@
 			files = (
 				A4168B221FE094D400E41ADD /* GameScene.swift in Sources */,
 				A4168B241FE094D400E41ADD /* GameViewController.swift in Sources */,
+				A4A1946A201E3617003CBF0C /* GameOverScene.swift in Sources */,
 				A4168B1C1FE094D400E41ADD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
