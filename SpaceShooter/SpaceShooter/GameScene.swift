@@ -302,8 +302,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate, UIViewControllerPreviewingDe
     func random() -> CGFloat {
         return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
     }
+<<<<<<< HEAD
     
     //Generate random values for spawning
+=======
+>>>>>>> 517eff9bd63943cd8b1d9dcda9e3883b6f9a9614
     func random(min: CGFloat, max: CGFloat) -> CGFloat {
         return random() * (max - min) + min
     }
