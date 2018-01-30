@@ -12,10 +12,10 @@ import GameplayKit
 
 @available(iOS 10.0, *)
 class GameViewController: UIViewController{
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
@@ -35,6 +35,8 @@ class GameViewController: UIViewController{
         scene.scaleMode = .aspectFill
         
         skView.presentScene(scene)
+        
+        
     }
 
     override var shouldAutorotate: Bool {
@@ -48,6 +50,7 @@ class GameViewController: UIViewController{
             return .all
         }
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,6 +58,6 @@ class GameViewController: UIViewController{
     }
 
     override var prefersStatusBarHidden: Bool {
-        return true
+        return false
     }
 }
